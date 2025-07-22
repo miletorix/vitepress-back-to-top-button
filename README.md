@@ -42,7 +42,3 @@ export default {
 ### Preview - Desktop
 
 ![demo-1](./assets/demo-1.gif)
-
-### Preview - Mobile
-
-![demo-2](./assets/demo-2.gif)
