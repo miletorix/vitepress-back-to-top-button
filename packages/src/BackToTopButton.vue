@@ -1,8 +1,9 @@
 <template>
   <Teleport to="body">
     <button
-      v-if="isMounted && isVisible"
+      v-show="isMounted"
       class="back-to-top-button"
+      :class="{ visible: isVisible }"
       @click="scrollToTop"
       :style="{
         '--progress': scrollProgress + '%',
@@ -29,6 +30,7 @@
     </button>
   </Teleport>
 </template>
+
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, defineProps } from 'vue'
@@ -120,7 +122,16 @@ const arrowSvg = props.arrowSvg || defaultArrowSvg
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top-button.visible {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
 }
 
 .progress-ring {
@@ -141,7 +152,7 @@ const arrowSvg = props.arrowSvg || defaultArrowSvg
   stroke: var(--progress-color, #42b983);
   stroke-width: 4;
   stroke-linecap: round;
-  transition: stroke-dasharray 0.3s ease;
+  /* transition: stroke-dasharray 0.3s ease; */
 }
 
 .progress-text,
