@@ -18,7 +18,8 @@ export default defineConfig({
           vue: 'Vue',
           vitepress: 'vitepress',
           'vitepress/client': 'vitepressClient'
-        }
+        },
+        format: 'es'
       }
     }
   }
