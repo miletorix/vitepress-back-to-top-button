@@ -15,6 +15,8 @@ npm i @miletorix/vitepress-back-to-top-button
 
 ## Usage
 
+### Configuration
+
 ```typescript
 // docs/.vitepress/theme/index.ts
 import type { Theme } from 'vitepress'
@@ -25,9 +27,29 @@ import '@miletorix/vitepress-back-to-top-button/style.css' //[!code ++]
 
 export default {
   extends: DefaultTheme,
-  // Layout,
   enhanceApp(ctx) {
     BackToTopButton(ctx.app) //[!code ++]
+  }
+}
+```
+
+### Advanced configuration
+
+```typescript
+// docs/.vitepress/theme/index.ts
+import type { Theme } from 'vitepress'
+import DefaultTheme from 'vitepress/theme'
+
+import BackToTopButton from '@miletorix/vitepress-back-to-top-button' //[!code ++]
+import '@miletorix/vitepress-back-to-top-button/style.css' //[!code ++]
+
+export default {
+  extends: DefaultTheme,
+  enhanceApp(ctx) {
+    BackToTopButton(ctx.app, { // [!code ++]
+      progressColor: 'string', // default is #42b983 [!code ++]
+      arrowSvg: `string` // svg code or path to svg file [!code ++]
+    })
   }
 }
 ```
