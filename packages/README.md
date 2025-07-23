@@ -58,4 +58,4 @@ export default {
 
 ### Preview - Desktop
 
-![demo-1](https://github.com/miletorix/vitepress-back-to-top-button/raw/main/assets/demo-1.gif)
+![demo-1](https://github.com/miletorix/vitepress-back-to-top-button/raw/main/assets/demo.gif)
