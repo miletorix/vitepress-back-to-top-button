@@ -53,7 +53,7 @@ export default {
   enhanceApp(ctx) {
     BackToTopButton(ctx.app, { // [!code ++]
       progressColor: 'string', // default is #42b983 [!code ++]
-      arrowSvg: `string` // svg code or path to svg file [!code ++]
+      arrowSvg: `string` // only svg code [!code ++]
     })
   }
 }
