@@ -63,4 +63,4 @@ export default {
 
 ### Preview - Desktop
 
-![demo-1](./assets/demo-1.gif)
+![demo-1](./assets/demo.gif)
