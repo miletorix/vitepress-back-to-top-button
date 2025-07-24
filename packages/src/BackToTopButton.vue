@@ -58,9 +58,14 @@ const updateScroll = () => {
     requestAnimationFrame(() => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop
       const scrollHeight = document.documentElement.scrollHeight - window.innerHeight
-      const progress = (scrollTop / scrollHeight) * 100
+
+      let progress = (scrollTop / scrollHeight) * 100
+
+      if (progress >= 99.5) progress = 100
+
       scrollProgress.value = Math.min(100, Math.max(0, progress))
       isVisible.value = scrollTop > 100
+
       ticking.value = false
     })
     ticking.value = true
