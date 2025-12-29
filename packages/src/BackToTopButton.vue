@@ -33,7 +33,7 @@
 
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, defineProps } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 const props = defineProps<{
   progressColor?: string

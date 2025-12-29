@@ -1,7 +1,7 @@
 {
   "name": "@miletorix/vitepress-back-to-top-button",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/miletorix/vitepress-back-to-top-button"
@@ -23,7 +23,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "vue-tsc --declaration --emitDeclarationOnly && vite build",
+    "build": "vue-tsc -p tsconfig.json && vite build && copy src\\index.d.ts dist\\index.d.ts",
     "clean": "rimraf dist node_modules .vite .turbo",
     "prepublishOnly": "npm run build"
   },
