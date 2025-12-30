@@ -1,7 +1,7 @@
 {
   "name": "@miletorix/vitepress-back-to-top-button",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/miletorix/vitepress-back-to-top-button"

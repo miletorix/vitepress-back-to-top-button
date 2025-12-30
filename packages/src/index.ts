@@ -1,17 +1,11 @@
-// import BackToTopButton from './BackToTopButton.vue'
-// export default BackToTopButton
-// export { BackToTopButton }
-
 import { createVNode, render, type App } from 'vue'
 import BackToTopButton from './BackToTopButton.vue'
+import type { BackToTopButtonOptions } from './types'
 
-export interface BackToTopOptions {
-  progressColor?: string
-  textColor?: string
-  arrowSvg?: string
-}
-
-export default function install(app: App, options: BackToTopOptions = {}) {
+export default function BackToTopButtonPlugin(
+  app: App,
+  options: BackToTopButtonOptions = {}
+) {
   if (typeof window === 'undefined') return
 
   const el = document.createElement('div')

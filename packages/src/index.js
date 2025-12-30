@@ -1,9 +1,6 @@
-// import BackToTopButton from './BackToTopButton.vue'
-// export default BackToTopButton
-// export { BackToTopButton }
 import { createVNode, render } from 'vue';
 import BackToTopButton from './BackToTopButton.vue';
-export default function install(app, options = {}) {
+export default function BackToTopButtonPlugin(app, options = {}) {
     if (typeof window === 'undefined')
         return;
     const el = document.createElement('div');

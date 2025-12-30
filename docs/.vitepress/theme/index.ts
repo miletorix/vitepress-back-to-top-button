@@ -10,6 +10,8 @@ import '@miletorix/vitepress-back-to-top-button/style.css'
 export default {
   extends: DefaultTheme,
   enhanceApp(ctx) {
-    BackToTopButton(ctx.app) 
+    BackToTopButton(ctx.app, {
+      progressColor: 'var(--vp-c-brand-1)'
+    }) 
   }
 }
